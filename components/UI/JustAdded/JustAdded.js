@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 
 const JustAdded = (props) => {
     const loopComp = (comp, digit) => {
