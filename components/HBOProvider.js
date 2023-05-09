@@ -7,9 +7,19 @@ export function useStateContext(){
 }
 
 export function HBOProvider({children}){
+    const [user, setUser] = useState('');
+    const defaultUserImg = 'https://uifaces.co/our-content/donated/vIqzOHXj.jpg'
+    const createUserAction = (e) =>{
+        setUser(e.target.value)
+        console.log(user);
+    }
     return(
         <StateContext.Provider
-        value={{test:'test'}}>
+        value={{
+            user,
+            createUserAction,
+            defaultUserImg
+            }}>
             {children}
         </StateContext.Provider>
     )
